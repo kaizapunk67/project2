@@ -1,0 +1,26 @@
+<div mat-dialog-content>
+  <h3>Product Estimator</h3>
+  <div class="form-group" [formGroup]="rForm">
+  <mat-form-field>
+    No Of Rooms:
+    <input type="number" matInput class="formControl" formControlName="rooms">
+  </mat-form-field>
+  <mat-form-field>
+    Width Of Wall:
+    <input type="number" matInput class="formControl" formControlName="width">
+  </mat-form-field>
+  <mat-form-field>
+    Height Of Wall: 
+    <input type="number" matInput class="formControl" formControlName="height">
+  </mat-form-field>
+  </div>
+  <div>
+  Total Price : {{price}}Rupees/{{litres}}litres
+  </div>
+  </div>
+  <div class="actions">
+  <div mat-dialog-actions >
+      <button mat-button (click)="onNoClick()">cancel</button>
+      <button mat-button  (click)="onNoClick2()" cdkFocusInitial>Calculate</button>
+  </div>
+</div>
